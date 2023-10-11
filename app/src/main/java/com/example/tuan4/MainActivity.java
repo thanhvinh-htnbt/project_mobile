@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     String[] names = {" Nguyen Van A", " Nguyen Van B", " Nguyen Van C", " Nguyen Van D",
@@ -46,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ArrayAdapter<CustomIconLabelAdapter> aa = new ArrayAdapter<CustomIconLabelAdapter>(this, R.layout.custom_layout_information);
-        myListView.setAdapter(aa);
+//        ArrayAdapter<CustomIconLabelAdapter> aa = new ArrayAdapter<CustomIconLabelAdapter>(this, R.layout.custom_layout_information, (List<CustomIconLabelAdapter>) information);
+        myListView.setAdapter(information);
 
         btn_gen = (Button) findViewById(R.id.btn_gen);
         edt_gen = (EditText) findViewById((R.id.edt_gen));
@@ -90,6 +92,23 @@ class CustomIconLabelAdapter extends ArrayAdapter<String> {
         phone.setText(phones[position]);
         icon.setImageResource(icons[position]);
         return (row);
+//
+//        ImageView imageView;
+//
+//        if (convertView == null) {
+//            // Nếu không có convertView tái sử dụng, tạo một ImageView mới
+//            imageView = new ImageView(context);
+//            imageView.setLayoutParams(new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+//        } else {
+//            // Nếu có convertView tái sử dụng, sử dụng lại ImageView đã có
+//            imageView = (ImageView) convertView;
+//        }
+//
+//        // Thiết lập hình ảnh cho ImageView
+//        imageView.setImageResource(images[position]);
+//
+//        return imageView;
     }
 } // CustomAdapter
 
