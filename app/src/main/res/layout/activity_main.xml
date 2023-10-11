@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="12dp">
         <Button
                 android:id="@+id/btn_gen"
                 android:layout_width="wrap_content"
@@ -19,38 +20,39 @@
                 android:text="Gen"/>
 
         <EditText
-        android:id="@+id/edt_gen"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"/>
+            android:id="@+id/edt_gen"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/style_edt"
+            android:padding="10dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Page"/>
+            android:text="Page"
+            android:layout_marginHorizontal="15dp"/>
 
-        <EditText
-            android:id="@+id/edt_page"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content">
-        </EditText>
-        <Button
-        android:id="@+id/btn_gpage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="↓"
-            android:textSize="16dp"/>
+        <Spinner
+            android:id="@+id/cbb_page"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:background="@drawable/style_edt" />
 
     </LinearLayout>
 
     <TextView android:id="@+id/txtMsg"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="You choose:"
-    android:textSize="24sp"
-    android:textStyle="bold" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You choose:"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:layout_margin="12dp"/>
 
     <ListView android:id="@+id/my_list"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

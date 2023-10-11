@@ -20,7 +20,7 @@
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nguyen Van A"
+            android:text="None"
             android:textSize="24dp"
             />
         <TextView
