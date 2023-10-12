@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onItemClick(AdapterView<?> av, View v, int position, long id) {
                 int i = information.getPosition(position);
                 if(i>= information.count) return;
-                txtMsg.setText("you choose: " + information.names[i]);
+                txtMsg.setText("You choose: " + information.names[i]);
             }
         });
 
